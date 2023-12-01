@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<script>
+    alert('Задание 1: Дана матрица размера mxn. Найти сумму и произведение элементов k-го столбца');
+    let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    ];
+    let k = 2; 
+
+    let sum = 0;
+    let product = 1;
+
+    for (let i = 0; i < matrix.length; i++) {
+        sum += matrix[i][k];
+        product *= matrix[i][k];
+    }
+ 
+    alert("Сумма элементов " + k + "-го столбца: " + sum  + " \nПроизведение элементов " + k + "-го столбца: " + product);
+
+</script>
+</body>
+</html>

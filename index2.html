@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<script>
+    alert('Задание 2: Дана матрица размера mxn. Удалите столбец, содержащий максимальный элемент матрицы');
+    let matrix = [
+    [1, 21, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    ];
+
+    let maxColumnIndex = 0;
+    let maxColumnValue = matrix[0][0];
+
+    for (let i = 0; i < matrix[0].length; i++) {
+        let columnMax = matrix[0][i];
+        for (let j = 0; j < matrix.length; j++) {
+            if (matrix[j][i] > columnMax) {
+            columnMax = matrix[j][i];
+            }
+    }
+        if (columnMax > maxColumnValue) {
+            maxColumnValue = columnMax;
+            maxColumnIndex = i;
+        }
+    }
+
+    for (let i = 0; i < matrix.length; i++) {
+        matrix[i].splice(maxColumnIndex, 1);
+    }
+    let matrixString = "";
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            matrixString += matrix[i][j] + " ";
+    }
+    matrixString += "\n";
+    }
+
+    alert(matrixString);
+</script>
+</body>
+</html>
